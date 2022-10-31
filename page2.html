@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/page2.css">
+</head>
+
+<body>
+	<div class="msg" style="position: fixed;z-index: 9999;top: 50%;left: 50%;
+	 transform: translate(-50%,-50%); width: 90%;height: 90%;
+		background: url(./img2/ing.png) no-repeat;background-size: 100% 100%;">
+		<div id="settings" style="display: flex;justify-content: center;align-items: center;height: 100%;font-size: 20px;color: #FFFFFF">
+			加载模型中<span id="msging"></span>
+		</div>
+	</div>
+    <div id="settingbtn">
+        设置
+    </div>
+	<div class="settingList" style="position: fixed;z-index: 9999;top: 50%;left: 50%;display: none;
+	 transform: translate(-50%,-50%); width: 90%;height: 90%;
+		background: url(./img2/ing.png) no-repeat;background-size: 100% 100%;color: #FFF;">
+		<div style="display: flex;width: 100%;height: 100%;flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;">
+			<div>是否开启帧率显示 <input type="checkbox"></div>
+			<div>画质选项
+				<input type="radio" name="hz">超清
+				<input type="radio" name="hz">高清
+				<input type="radio" name="hz">普通
+				<input type="radio" name="hz">最低
+			</div>
+			<div>自定义画质（请先查看帧率是否低于30）
+				宽度 <input type="text">
+				高度 <input type="text">
+			</div>
+			<div>
+				是否开启动画<input type="checkbox">
+			</div>
+			<div>
+				是否开启光效（bate）<input type="checkbox">
+			</div>
+			<div>
+				是否开启自由视角<input type="checkbox">
+			</div>
+		</div>
+
+	</div>
+    <div class="bg">
+        <div class="top clsbox">
+            <div class="topleft">
+                XX市医院可视化大屏
+            </div>
+            <div class="topright">
+                <div>
+                    <span>时间</span><button>返回</button'>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clsbox">
+            <div class="mainleft">
+                <div class="contitle">
+                    市中心医院
+                </div>
+                <div id="run">
+                </div>
+            </div>
+
+            <div class="mainright">
+                <!-- 右边视图 -->
+                <div class="mainRightTop clsbox select">
+                    <h2>选择楼层</h2>
+                    <div>
+                        <div>
+                            <button>
+                                一号楼
+                            </button>
+                        </div>
+                        <button>
+                            顶楼
+                        </button>
+                        <button>
+                            六楼
+                        </button>
+                        <button>
+                            五楼
+                        </button>
+                        <button>
+                            四楼
+                        </button>
+                        <button>
+                            三楼
+                        </button>
+                        <button>
+                            二楼
+                        </button>
+                        <button>
+                            一楼
+                        </button>
+                    </div>
+                    <div>
+                        <div>
+
+                            <button>
+                                二号楼
+                            </button>
+                        </div>
+                        <button>
+                            顶楼
+                        </button>
+                        <button>
+                            六楼
+                        </button>
+                        <button>
+                            五楼
+                        </button>
+                        <button>
+                            四楼
+                        </button>
+                        <button>
+                            三楼
+                        </button>
+                        <button>
+                            二楼
+                        </button>
+                        <button>
+                            一楼
+                        </button>
+                    </div>
+                    <div>
+                        <div>
+                        <button>
+                            三号楼
+                        </button>
+                        </div>
+                        <button>
+                            顶楼
+                        </button>
+                        <button>
+                            六楼
+                        </button>
+                        <button>
+                            五楼
+                        </button>
+                        <button>
+                            四楼
+                        </button>
+                        <button>
+                            三楼
+                        </button>
+                        <button>
+                            二楼
+                        </button>
+                        <button>
+                            一楼
+                        </button>
+                    </div>
+
+
+                </div>
+                <div class="mainRightDown clsbox ">
+                    <!-- 下版部分 -->
+                    <div class="mainRightDownLeft">
+                        <!-- 左边 -->
+                        <div>
+                            <div>
+                                <h2>
+                                    病房容纳情况：
+                                </h2>
+                            </div>
+                                <div id="main3" style="width: 100%;height: 80%;">
+
+                                </div>
+
+                        </div>
+
+                        <div>
+                            <div>
+                                <h2>
+                                    医生占用情况：
+
+                                </h2>
+                            </div>
+                                <div id="main2" style="width: 100%;height: 100%;margin: auto 0;">
+
+                                </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h2>
+                                    该楼新冠患者人数：
+                                </h2>
+                            </div>
+                            
+                            <div id="main1" style="width: 100%;height: 70%;margin: auto auto;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainRightDownRight">
+                        <div>
+                            <h2>
+                                最新内容
+                            </h2>
+                        </div>
+                        <div class="context">
+                            <ul id="list">
+                                <li>
+                                    <div>
+                                        感冒患者增加
+                                    </div>
+                                </li>
+                                
+                                <li >
+                                    <div>
+                                        阿司匹林肠溶片健康人体生物等效性试验
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/echarts.js">
+
+    </script>
+    <script src="./js/chars.js">
+
+    </script>
+
+    <script async src="../js/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../js/three.module.js"
+            }
+        }
+    </script>
+    <script type="module" src="./js/init.js">
+
+    </script>
+
+    <script>
+        let arr = [
+            {
+                msg:"阿司匹林肠溶片健康人体生物等效性试验",
+            },{
+                msg:"普瑞巴林胶囊人体生物等效性试验"
+            },{
+                msg:"持续质量改进在骨科病房管理中的应用及效果评价	"
+            },{
+                msg:"阿奇霉素干混悬剂生物等效性试验"
+            },{
+                msg:"肠道菌群及其代谢产物与脓毒症相关肝损伤的关系"
+            },{
+                msg:"星状神经节阻滞在非心脏手术后心肌损伤中的预防作用"
+            },{
+                msg:"肌内效贴联合井穴放血治疗脑卒中后肩手综合征的疗效观察"
+            },{
+                msg:"局部变应性鼻炎屋尘螨特异性皮下免疫治疗的临床研究"
+            },{
+                msg:"体外循环下尿液外泌体lncRNA测序分析"
+            },{
+                msg:"头孢克肟干混悬剂人体生物等效性试验"
+            },{
+                msg:"注射用醋酸亮丙瑞林微球人体生物等效性研究"
+            },{
+                msg:"硫酸沙丁胺醇片健康人体生物等效性研究"
+            },{
+                msg:"拉西地平片的生物等效性研究"
+            },{
+                msg:"呋塞米片生物等效性试验"
+            },{
+                msg:"维格列汀片的生物等效性试验"
+            },{
+                msg:"双氯芬酸钠缓释片的人体生物等效性试验"
+            },{
+                msg:"普瑞巴林胶囊（150mg）生物等效性试验"
+            },{
+                msg:"沙库巴曲缬沙坦钠片人体生物等效性试验"
+            },{
+                msg:"头孢克肟干混悬剂人体生物等效性试验	"
+            },{
+                msg:"甲泼尼龙片的人体生物等效性试验"
+            },{
+                msg:"星状神经节阻滞在非心脏手术后心肌损伤中的预防作用"
+            }
+            ,{
+                msg:"基于蛋白质组学技术的子宫颈癌肿瘤细胞侵袭和迁移机制研究及预后模型构建"
+            }
+            ,{
+                msg:"ctDNA对指导妇科恶性肿瘤术后治疗及预测复发风险的临床研究"
+            }
+            ,{
+                msg:"穴位按摩联合神经肌肉电刺激对痉挛型脑瘫儿童误吸情况的疗效观察"
+            }
+            ,{
+                msg:"肌内效贴联合井穴放血治疗脑卒中后肩手综合征的疗效观察"
+            }
+            ,{
+                msg:"局部变应性鼻炎屋尘螨特异性皮下免疫治疗的临床研究"
+            }
+            ,{
+                msg:"体外循环下尿液外泌体lncRNA测序分析	"
+            }
+
+
+
+
+
+
+
+
+        ]
+        
+        let list = document.getElementById("list")
+        let str = ""
+        for (let  a= 0;  a< arr.length; a++) {
+            str+="<li>"
+            for (const key in arr[a]) {
+                str+= `${arr[a].msg}`
+            }
+            str+="</li>"
+            
+        }
+        for (var i = 0; i < 2; i++) {
+            str+=str
+        }
+        list.innerHTML = str
+
+
+        let upup = 0
+         setInterval(function name(params) {
+
+            list.style.transform = `translate(5px, -${upup}px)`
+            upup++;
+        },100)
+
+
+
+       
+    </script>
+
+    
+
+</body>
+
+</html>
