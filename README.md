@@ -8,6 +8,12 @@
 
 练手项目、存在一些问题、暂未修复
 
+## 快速启动
+
+使用server即可
+
+在线预览：https://weimeng101.github.io/2022.9-Demo02/
+
 ## 项目截图
 
 ![](./img2/img.png)
