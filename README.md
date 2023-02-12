@@ -16,7 +16,7 @@
 
 ## 项目截图
 
-![](./img2/img.png)
+[./img2/img.png](./img2/img.png)
 
 ## UI
 
